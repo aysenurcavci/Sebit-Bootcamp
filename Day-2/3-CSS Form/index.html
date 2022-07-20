@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+    <meta name="author" content="Ayşe Nur Çavcı">
+    <meta name="keywords" content="Front-End, HTML, CSS">
+    <title>CSS</title>
+    <style>
+        .formElement{
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 15px 0px;
+            box-sizing: border-box;
+        }
+        .formSubmit{
+            width: 100%;
+            padding: 10px;
+            background-color: lightgreen;
+            border: none;
+            border-radius: 15px;
+            color: white;
+        }
+        .formElement:focus{
+            background-color: lightgreen !important;
+        }
+        .formElement:hover{
+            background-color: red;
+        }
+        .formGeneral{
+            background-color: lightgrey;
+            padding: 20px;
+            margin: 20px 350px;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="" class="formGeneral">
+        <label for="">Ad</label>
+        <input type="text" class="formElement" name="firstName" placeholder="Adınızı Giriniz">
+        <label for="">Soyad</label>
+        <input type="text" class="formElement" name="lastName" placeholder="Soyadınızı Giriniz">
+        <label for="">Şehirler</label>
+        <select name="country" class="formElement">
+            <option value="tr">Turkiye</option>
+            <option value="en">England</option>
+            <option value="fr">Francais</option>
+        </select>
+        <input type="submit" class="formSubmit" value="Kaydet">
+    </form>
+</body>
