@@ -1,0 +1,43 @@
+header{
+    background-color:rgb(68, 77, 87);
+    height: 40px;
+    width:100%;
+
+}
+
+a{
+    color:white;
+    margin: 15px ;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    color:lightslategrey;
+    text-decoration: none;
+}
+
+a:visited{
+    color:white;
+}
+
+
+nav{
+    background-color: rgba(235, 164, 164, 0.363);
+    height: px;
+
+
+}
+
+h2{
+    color:rgb(77, 77, 77);
+}
+
+body{
+    color: grey;
+}
+
+section{
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
