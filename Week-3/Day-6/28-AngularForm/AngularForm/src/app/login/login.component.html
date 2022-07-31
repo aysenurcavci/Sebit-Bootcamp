@@ -1,0 +1,26 @@
+<div style="display:flex; justify-content: center; align-items: center; height: 80%;">
+  <mat-card class="example-card" style="min-width: 300px; min-height: 300px;">
+    <mat-card-header>
+      <mat-card-title>Giriş Yap</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="loginForm" style="display: flex; flex-direction: column;">
+        <mat-form-field>
+          <mat-label>email</mat-label>
+          <input formControlName="email" matInput placeholder="e-mail giriniz">
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Lütfen email giriniz!</mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Lütfen geçerli bir email adresi giriniz!
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>şifre</mat-label>
+          <input formControlName="password" type="password" matInput placeholder="şifre giriniz">
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Lütfen şifre giriniz!</mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">Şifreniz en az 8 karakter uzunluğunda
+            olmalı!</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Giriş Yap</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
