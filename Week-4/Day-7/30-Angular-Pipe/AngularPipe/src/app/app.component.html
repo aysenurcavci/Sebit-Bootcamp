@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">İsim</label>
+        <input class="form-control" type="text" (input)="OnNameChange($event.target.value)">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""><b>İsim</b></label>
+      <div>
+        {{name | lowercase }}
+        <!-- {{name | uppercase }} -->
+        <!-- {{name | titlecase }} -->
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Tarih</label>
+        <input class="form-control" type="date" (input)="OnDateChange($event.target.value)">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""><b>Tarih</b></label>
+      <div>
+        {{date | date : 'longDate'}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Tutar</label>
+        <input class="form-control" type="number" (input)="OnMoneyChange($event.target.value)">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""><b>Tutar</b></label>
+      <div>
+        {{money | currency : 'EUR'}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Boy</label>
+        <input class="form-control" type="number" (input)="OnHeightChange($event.target.value)">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""><b>Boy</b></label>
+      <div>
+        {{height | number : '1.1-4' }}
+      </div>
+    </div>
+  </div>
+</div>
