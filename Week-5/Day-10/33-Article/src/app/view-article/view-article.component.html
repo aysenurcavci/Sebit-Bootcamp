@@ -1,0 +1,29 @@
+<div style="display:flex; justify-content: center; margin-top: 50px;">
+  <div style="width: 50%;">
+    <mat-card style="margin: 30px 0px;">
+      <mat-card-content>
+        <div>
+          <mat-card-title>{{articleData[articleId].title}}</mat-card-title>
+          <mat-card-subtitle>{{articleData[articleId].content}}</mat-card-subtitle>
+          <mat-card-subtitle> <strong>Yazar:</strong>{{articleData[articleId].author}}</mat-card-subtitle>
+          <div *ngFor="let comment of articleData[articleId].comment">
+            <span style="margin-right: 30px;">{{comment.username}}</span>
+            <span>{{comment.comment}}</span>
+          </div>
+          <div style=" display:flex ; flex-direction: column;">
+          <mat-form-field>
+            <mat-label>Kullanıcı Adı</mat-label>
+            <input [(ngModel)] ="username" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Yorum</mat-label>
+            <input matInput [(ngModel)] ="comment" >
+          </mat-form-field>
+          </div>
+          <button mat-raised-button color="primary" (click)="addComment()" >Yorum Yap</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
